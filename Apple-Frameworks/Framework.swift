@@ -2,14 +2,12 @@
 //  Framework.swift
 //  Apple-Frameworks
 //
-//  Created by Khalifa Waziri on 04/02/2026.
+//  Created by Khalifa Waziri on 05/04/2026.
 //
 
 import Foundation
 
-struct Framework: Hashable, Identifiable  {
-     
-    let id = UUID()
+struct Framework {
     let name: String
     let imageName: String
     let urlString: String
@@ -98,7 +96,5 @@ struct MockData {
                   imageName: "tipkit",
                   urlString: "https://developer.apple.com/documentation/widgetkit",
                   description: "WidgetKit is a framework for building watchOS apps that display dynamic, interactive user interfaces. It allows you to create watchOS complications and interfaces that can update in real-time based on data from your app or the user."),
-                  
-                  
     ]
 }
