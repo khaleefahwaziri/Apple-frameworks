@@ -6,42 +6,47 @@
 //
 
 import SwiftUI
+    
+let columns: [GridItem] = [GridItem(.flexible()),
+                           GridItem(.flexible()),
+                           GridItem(.flexible())
+                                    
+                          ]
 
 struct ContentView: View {
     var body: some View {
-        VStack{
-            
-            frameworkTitleView(name: "Apple Frameworks" , imageName: "app-clip")
-            
-            
+        LazyVGrid(columns: columns) {
+            ForEach(MockData.frameworks) { framework in
+                FrameworkTitleView(name: framework.name, imageName: framework.imageName)
+            }
         }
-    }
-}
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
+         
     }
 }
 
 
-struct frameworkTitleView: View {
-    
+#Preview {
+    ContentView()
+}
+
+
+struct FrameworkTitleView: View {
     let name: String
     let imageName: String
     
     var body: some View {
-        VStack{
+        VStack {
             Image(imageName)
                 .resizable()
                 .frame(width: 90, height: 90)
-            
             Text(name)
-                .font(.title3)
+                .font(.title2)
                 .fontWeight(.semibold)
                 .scaledToFit()
                 .minimumScaleFactor(0.6)
-            
         }
+            
     }
 }
+
+
