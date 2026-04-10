@@ -9,6 +9,7 @@ import SwiftUI
     
 let columns: [GridItem] = [GridItem(.flexible()),
                            GridItem(.flexible()),
+                           GridItem(.flexible()),
                            GridItem(.flexible())
                                     
                           ]
