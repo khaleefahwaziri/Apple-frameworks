@@ -7,29 +7,29 @@
 
 import SwiftUI
 
+
 struct ContentView: View {
     
-    let columns: [GridItem] = [GridItem(.flexible()),
+    let Columns: [GridItem] = [GridItem(.flexible()),
                                GridItem(.flexible()),
                                GridItem(.flexible())]
     
     var body: some View {
-        LazyVGrid(columns: columns) {
+        LazyVGrid(columns: Columns) {
             ForEach(MockData.frameworks) { framework in
-                frameworkTitleView(framework: framework)
+                FrameworkTitleView(framework: framework)
             }
             
         }
     }
 }
 
+
 #Preview {
     ContentView()
 }
 
-
-
-struct frameworkTitleView: View {
+struct FrameworkTitleView: View {
     
     let framework: Framework
     
@@ -38,13 +38,14 @@ struct frameworkTitleView: View {
             Image(framework.imageName)
                 .resizable()
                 .frame(width: 90, height: 90)
-                
+            
             Text(framework.name)
                 .font(.title2)
-                .fontWeight(.bold)
+                .fontWeight(.semibold)
                 .scaledToFit()
                 .minimumScaleFactor(0.6)
         }
+        
     }
 }
 
