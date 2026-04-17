@@ -20,6 +20,13 @@ struct Framework: Hashable, Identifiable {
 
 struct MockData {
     
+    static let sampleFrameworks = 
+        Framework(name: "ARKit",
+                  imageName: "arkit",
+                  urlString: "https://developer.apple.com/documentation/arkit",
+                  description: "ARKit is a framework that enables you to build augmented reality (AR) apps using Swift. It provides a set of tools and features for creating immersive AR experiences on iOS, macOS, and tvOS.")
+    
+    
     static let frameworks = [
         Framework(name: "App Clips",
                   imageName: "app-clip",

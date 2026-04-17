@@ -56,36 +56,3 @@ struct FrameworkTitleView: View {
     }
 }
 
-//struct DetailedView: View {
-//    
-//    let ImageName: String
-//    let Name: String
-//    let Description: String
-//    
-//    var body: some View {
-//        VStack{
-//            Image(ImageName)
-//                .resizable()
-//                .frame(width: 90, height: 90)
-//            
-//            Text(Name)
-//                .font(.title)
-//                .fontWeight(.bold)
-//                .scaledToFit()
-//                .minimumScaleFactor(0.6)
-//            
-//            Text(Description)
-//                .font(.body)
-//                .scaledToFit()
-//                .minimumScaleFactor(0.6)
-//            
-//            Button {
-//                print("Learn More")
-//            } label: {
-////                Toggle(, isOn: <#T##Binding<Bool>#>)
-//            }
-//        }
-//        .padding()
-//        
-//    }
-//}
