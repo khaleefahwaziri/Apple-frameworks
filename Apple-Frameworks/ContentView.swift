@@ -12,9 +12,7 @@ struct ContentView: View {
     
     let Columns: [GridItem] = [GridItem(.flexible()),
                                GridItem(.flexible()),
-                               GridItem(.flexible()),
-                               GridItem(.flexible())
-    ]
+                               GridItem(.flexible()),]
     
     var body: some View {
         NavigationView {
