@@ -14,29 +14,28 @@ struct ContentView: View {
                                GridItem(.flexible()),
                                GridItem(.flexible()),]
     
-                               
     var body: some View {
         NavigationView {
             ScrollView{
                 LazyVGrid(columns: Columns) {
-                    ForEach(MockData.frameworks){ item in
-                        FrameworkTittleView(framework: item)
+                    ForEach(MockData.frameworks) { framework in
+                        FrameworkTitleView(framework: framework)
                     }
                 }
+            
             }
-            .navigationTitle(Text("🍎 Apple Frameworks"))
+            .navigationTitle(Text("🍎 Frameworks"))
         }
-        
-        
     }
 }
 
 
 #Preview {
     ContentView()
+        .preferredColorScheme(.dark)
 }
 
-struct FrameworkTittleView: View {
+struct FrameworkTitleView: View {
     
     let framework: Framework
     
@@ -45,70 +44,15 @@ struct FrameworkTittleView: View {
             Image(framework.imageName)
                 .resizable()
                 .frame(width: 90, height: 90)
-
+            
             Text(framework.name)
                 .font(.title2)
                 .fontWeight(.semibold)
-                .scaledToFill()
+                .scaledToFit()
                 .minimumScaleFactor(0.6)
         }
-        }
+        .padding()
+        
+    }
 }
-
-
-
-
-
-
-
-
-
-
-//struct ContentView: View {
-//    
-//    let Columns: [GridItem] = [GridItem(.flexible()),
-//                               GridItem(.flexible()),
-//                               GridItem(.flexible()),]
-//    
-//    var body: some View {
-//        NavigationView {
-//            ScrollView{
-//                LazyVGrid(columns: Columns) {
-//                    ForEach(MockData.frameworks) { framework in
-//                        FrameworkTitleView(framework: framework)
-//                    }
-//                }
-//            
-//            }
-//            .navigationTitle(Text("🍎 Frameworks"))
-//        }
-//    }
-//}
-//
-//
-//#Preview {
-//    ContentView()
-//        .preferredColorScheme(.dark)
-//}
-//
-//struct FrameworkTitleView: View {
-//    
-//    let framework: Framework
-//    
-//    var body: some View {
-//        VStack{
-//            Image(framework.imageName)
-//                .resizable()
-//                .frame(width: 90, height: 90)
-//            
-//            Text(framework.name)
-//                .font(.title2)
-//                .fontWeight(.semibold)
-//                .scaledToFit()
-//                .minimumScaleFactor(0.6)
-//        }
-//        .padding()
-//        
-//    }
-//}
 
