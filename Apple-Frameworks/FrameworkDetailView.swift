@@ -13,7 +13,7 @@ struct FrameworkDetailView: View {
     
     var body: some View {
         VStack {
-            FrameworkTitleView(framework: framework)
+//            FrameworkTitleView(framework: framework)
             
         }
     }
